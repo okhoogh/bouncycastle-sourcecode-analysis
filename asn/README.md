@@ -1,1 +1,168 @@
+## ASN.1 - 密码算法涉及的数据结构及编码
 
+```
+├── asn1
+    ├── anssi					# 法国国家安全局-标识
+    ├── bc					# Bouncy Castle专属API
+    ├── bsi					# 英国标准协会
+    ├── cmc					# 使用加密消息语法的证书管理协议
+    ├── cmp					# 支持X509公钥基础设施的证书管理协议    
+    ├── cms					# 支持在PKCS#7中描述的加密消息语法
+    ├── crmf					# 支持X509公钥基础设施的证书请求消息格式
+    ├── cryptlib				# 密码库标识
+    ├── cryptopro				# 俄罗斯密码标准-参数、标识符
+    ├── dvcs					# 数据验证和认证服务器协议
+    ├── eac
+    ├── edec    
+    ├── esf    
+    ├── ess    
+    ├── est        
+    ├── gm        
+    ├── gnu        
+    ├── iana    
+    ├── icao    
+    ├── isara        
+    ├── isismtt    
+    ├── iso    
+    ├── kisa    
+    ├── microsoft    
+    ├── nist
+    ├── nsri    
+    ├── ntt    
+    ├── ocsp    
+    ├── oiw    
+    ├── pkcs    
+    ├── rosstandart    
+    ├── sec    
+    ├── smime
+    ├── teletrust    
+    ├── test
+    ├── tsp    
+    ├── ua
+    ├── util    
+    ├── x9
+    ├── x500     
+    ├── x509
+    ├── ASN1Absent.java
+    ├── ASN1ApplicationSpecific.java
+    ├── ASN1ApplicationSpecificParser.java
+    ├── ASN1BitString.java
+    ├── ASN1BitStringParser.java
+    ├── ASN1BMPString.java
+    ├── ASN1Boolean.java
+    ├── ASN1Choice.java
+    ├── ASN1Encodable.java
+    ├── ASN1EncodableVector.java
+    ├── ASN1Encoding.java
+    ├── ASN1Enumerated.java
+    ├── ASN1Exception.java
+    ├── ASN1External.java
+    ├── ASN1ExternalParser.java
+    ├── ASN1GeneralizedTime.java
+    ├── ASN1GeneralString.java
+    ├── ASN1Generator.java
+    ├── ASN1GraphicString.java
+    ├── ASN1IA5String.java
+    ├── ASN1InputStream.java
+    ├── ASN1Integer.java
+    ├── ASN1Null.java
+    ├── ASN1NumericString.java
+    ├── ASN1Object.java
+    ├── ASN1ObjectDescriptor.java
+    ├── ASN1ObjectIdentifier.java
+    ├── ASN1OctetString.java
+    ├── ASN1OctetStringParser.java
+    ├── ASN1OutputStream.java
+    ├── ASN1ParsingException.java
+    ├── ASN1Primitive.java
+    ├── ASN1PrintableString.java
+    ├── ASN1RelativeOID.java
+    ├── ASN1Sequence.java
+    ├── ASN1SequenceParser.java
+    ├── ASN1Set.java
+    ├── ASN1SetParser.java
+    ├── ASN1StreamParser.java
+    ├── ASN1String.java
+    ├── ASN1T61String.java
+    ├── ASN1Tag.java
+    ├── ASN1TaggedObject.java
+    ├── ASN1TaggedObjectParser.java
+    ├── ASN1Type.java
+    ├── ASN1UniversalString.java
+    ├── ASN1UniversalType.java
+    ├── ASN1UniversalTypes.java
+    ├── ASN1UTCTime.java
+    ├── ASN1UTF8String.java
+    ├── ASN1Util.java
+    ├── ASN1VideotexString.java
+    ├── ASN1VisibleString.java
+    ├── BERApplicationSpecific.java
+    ├── BERApplicationSpecificParser.java
+    ├── BERBitString.java
+    ├── BERBitStringParser.java
+    ├── BERFactory.java
+    ├── BERGenerator.java
+    ├── BEROctetString.java
+    ├── BEROctetStringGenerator.java
+    ├── BEROctetStringParser.java
+    ├── BEROutputStream.java
+    ├── BERSequence.java
+    ├── BERSequenceGenerator.java
+    ├── BERSequenceParser.java
+    ├── BERSet.java
+    ├── BERSetParser.java
+    ├── BERTaggedObject.java
+    ├── BERTaggedObjectParser.java
+    ├── BERTags.java
+    ├── ConstructedBitStream.java
+    ├── ConstructedOctetStream.java
+    ├── DateUtil.java
+    ├── DefiniteLengthInputStream.java
+    ├── DERApplicationSpecific.java
+    ├── DERBitString.java
+    ├── DERBMPString.java
+    ├── DERExternal.java
+    ├── DERExternalParser.java
+    ├── DERFactory.java
+    ├── DERGeneralizedTime.java
+    ├── DERGeneralString.java
+    ├── DERGenerator.java
+    ├── DERGraphicString.java
+    ├── DERIA5String.java
+    ├── DERNull.java
+    ├── DERNumericString.java
+    ├── DEROctetString.java
+    ├── DEROctetStringParser.java
+    ├── DEROutputStream.java
+    ├── DERPrintableString.java
+    ├── DERSequence.java
+    ├── DERSequenceGenerator.java
+    ├── DERSet.java
+    ├── DERT61String.java
+    ├── DERTaggedObject.java
+    ├── DERUniversalString.java
+    ├── DERUTCTime.java
+    ├── DERUTF8String.java
+    ├── DERVideotexString.java
+    ├── DERVisibleString.java
+    ├── DLApplicationSpecific.java
+    ├── DLBitString.java
+    ├── DLBitStringParser.java
+    ├── DLExternal.java
+    ├── DLFactory.java
+    ├── DLOutputStream.java
+    ├── DLSequence.java
+    ├── DLSequenceParser.java
+    ├── DLSet.java
+    ├── DLSetParser.java
+    ├── DLTaggedObject.java
+    ├── DLTaggedObjectParser.java
+    ├── IndefiniteLengthInputStream.java
+    ├── InMemoryRepresentable.java
+    ├── LazyConstructionEnumeration.java
+    ├── LazyEncodedSequence.java
+    ├── LimitedInputStream.java
+    ├── OIDTokenizer.java
+    ├── package.html
+    └── StreamUtil					# ASN.1 Stream工具类
+```
